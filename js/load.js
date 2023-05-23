@@ -1,4 +1,4 @@
-function getData (onSuccess, onFail) {
+export function getData (onSuccess, onFail) {
   fetch('https://27.javascript.pages.academy/kekstagram-simple/data')
     .then((response) => response.json())
     .then((photos) => {
@@ -9,7 +9,7 @@ function getData (onSuccess, onFail) {
     });
 }
 
-function sendData (onSuccess, onFail, body) {
+export function sendData (onSuccess, onFail, body) {
   fetch(
     'https://27.javascript.pages.academy/kekstagram-simple',
     {
@@ -27,4 +27,3 @@ function sendData (onSuccess, onFail, body) {
   });
 }
 
-export {getData, sendData};

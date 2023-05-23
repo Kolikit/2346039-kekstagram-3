@@ -3,14 +3,11 @@ import {settings} from './data.js';
 
 const sliderElement = document.querySelector('.effect-level__slider');
 const valueElement = document.querySelector('.effect-level__value');
+const effects = document.querySelector('.effects__list');
+const defaultEffect = effects.querySelector('#effect-none');
 
 let currentSettings = settings[0];
-
-const effects = document.querySelector('.effects__list');
-
-const defaultEffect = effects.querySelector('#effect-none');
 let effect = 'none';
-
 
 noUiSlider.create(sliderElement, {
   range: {
